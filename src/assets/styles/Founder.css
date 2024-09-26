@@ -1,39 +1,103 @@
+/* Importando a fonte */
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-.container{
-    height: 100vh ;
+.container {
+    height: auto;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
+    text-align: center;
 }
 
-.container h1{
-    padding-top: 30px;
+.container h1 {
     font-family: 'Sans-serif'; 
-    font-size: 40px;
+    font-size: 4vw; /* Tamanho da fonte menor em telas grandes */
+    margin-bottom: 20px;
 }
 
-.founder{
-    padding-left: 8vw;
+/* Estilo principal do Founder */
+.founder {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: left;
+    width: 100%;
 }
 
-.founder h3{
+@media (max-width: 768px) {
+    .founder {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Imagem do Founder */
+.founder img {
+    border-radius: 50%; /* Deixa a imagem circular */
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Ajuste de tamanho de imagem para telas menores */
+@media (max-width: 430px) {
+    .founder img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Título e descrição do Founder */
+.founder h3 {
     font-family: 'Sans-serif'; 
-    font-size: 30px;
+    font-size: 4vw; /* Menor em telas grandes */
+    margin: 10px 0;
+    text-align: center;
 }
 
-.founder p{
-    font-size: 15px; 
+@media (min-width: 1200px) {
+    .founder h3 {
+        font-size: 3vw; /* Ainda menor para telas muito grandes */
+    }
+}
+
+.founder p {
+    font-size: 2.5vw; /* Tamanho menor para telas maiores */
     font-family: "Arvo", serif;
     font-weight: 500;
-    font-style: normal;
+    line-height: 1.4;
 }
 
+@media (min-width: 1200px) {
+    .founder p {
+        font-size: 2vw; /* Ajuste menor em telas maiores */
+    }
+}
 
-.graduation{
-    width: 60%;
+/* Para telas pequenas, ajusta o tamanho */
+@media (max-width: 430px) {
+    .founder h3 {
+        font-size: 5vw;
+    }
+    
+    .founder p {
+        font-size: 4vw;
+    }
+}
+
+.graduation {
+    width: 100%; 
+    text-align: center;
+    padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .graduation {
+        width: 90%;
+        text-align: center;
+    }
 }

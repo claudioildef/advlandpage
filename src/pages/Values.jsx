@@ -18,7 +18,7 @@ const Values = () => {
   };
 
   return (
-    <div className='container'>
+    <div className='values-background'>
       <h1>A Essência</h1>
       <div className='values-list'>
         {values.map((value, index) => (
