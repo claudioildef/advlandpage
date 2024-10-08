@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import "../assets/styles/Contact.css"
 
 const Contact = () => {
   return (
@@ -9,7 +10,7 @@ const Contact = () => {
         <input placeholder='Nome'></input>
         <input placeholder='Email'></input>
         <input placeholder='Informações Adicionais'></input>
-      </div>  
+      </div>
     </div>
   )
 }
