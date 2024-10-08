@@ -10,6 +10,7 @@ const Home = () => {
 
       <div className="hero-content">
 
+
         <div className="hero-desc">
           <p>
             Somos um escritório de advocacia comprometido em fornecer soluções
@@ -18,6 +19,7 @@ const Home = () => {
             ajudá-lo em todas as suas questões legais.
           </p>
         </div>
+        <button className='cta-button'>Entre em contato</button>
       </div>
     </div>
   );

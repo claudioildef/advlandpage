@@ -39,7 +39,31 @@
     margin-bottom: 20px;
 }
 
+.cta-button{
+    min-width: 80%;
+    max-width: 100%;
+    min-height: 20%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(96, 125, 204, 0.8);
+    cursor: pointer;
+    color: white;
+    font-size: 4vh;
+    font-weight: bold;
+    border: none;
+    transition: transform 1s ease;
+}
+
+.cta-button:hover{
+    background-color: rgba(46, 66, 116, 0.8)  ;
+    transform: scale(1.05);
+}
+
 .hero-content {
+    display: flex;
+    min-height: 80%;
+    justify-content: center;
+    flex-direction: column;
     background-color: rgba(16, 23, 40, 0.8); /* Fundo preto semi-transparente */
     padding: 20px;
     border-radius: 5px;
