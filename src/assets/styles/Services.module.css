@@ -1,0 +1,155 @@
+.container {
+  padding: 20px;
+  text-align: center;
+
+  position: relative;
+  height: 80vh;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/valores.jpg');
+  /* Caminho para a imagem de fundo */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 0.8;
+  /* Ajuste a opacidade aqui */
+  z-index: -1;
+  /* Coloca a imagem atrás do conteúdo */
+}
+
+.container h1 {
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-size: 40px;
+}
+
+/* Envolvendo o grid e o conteúdo de detalhes */
+.servicesWrapper {
+  display: flex;
+  justify-content: center;
+  transition: all 1s ease;
+  width: 100%;
+}
+
+.servicesGrid {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 40%;
+  transition: all 0.5s ease;
+}
+
+@media (max-width: 768px) {
+
+  .servicesGrid {
+    width: 80%;
+
+  }
+
+}
+
+.serviceItem {
+  cursor: pointer;
+  background-color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 7vh;
+  border: 1px solid black;
+  transition: background-color 0.3s ease;
+  color: #000000;
+}
+
+.serviceItem:hover,
+.serviceItem.selected {
+  background-color: #000000;
+  color: white;
+}
+
+.serviceItem p {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.btnSair {
+  text-align: left;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 40%;
+}
+
+/* Descrição de serviços */
+.serviceDetails {
+  position: absolute;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  width: 40vw;
+  height: 63%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease, width 0.5s ease;
+  opacity: 0;
+  font-size: 30px;
+  transform: translateX(50%);
+}
+
+@media (min-width: 768px) {
+  .serviceDetails {
+    font-size: 20px;
+  }
+}
+
+.shift .servicesGrid {
+  transform: translateX(-50%);
+}
+
+@media (max-width: 1000px) {
+  .shift .servicesGrid {
+    transform: translateX(-120%);
+  }
+
+  .serviceDetails {
+    width: 80%;
+    transform: translateX(0);
+    font-size: 18px;
+  }
+}
+
+/* Para telas menores (ex: telas de celular) */
+@media (max-width: 200px) {
+  .shift .servicesGrid {
+    transform: translateX(-150%);
+    /* Ajuste o valor para mover o grid completamente para fora da tela */
+  }
+
+  .serviceDetails {
+    width: 100%;
+  }
+}
+
+.shift .serviceDetails {
+  transition-delay: 0.5s;
+}
+
+.shift .serviceDetails.show {
+  opacity: 1;
+  transition-delay: 0.5s;
+}

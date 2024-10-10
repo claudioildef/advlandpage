@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import '../assets/styles/Founder.css';
-import '../assets/styles/Values.css';
+import React, { forwardRef, useState } from 'react';
+import styles from '../assets/styles/Values.module.css';
 
-const Values = () => {
+const Values = forwardRef((props, ref) => {
   const [activeIndex, setActiveIndex] = useState(null); // Armazena o índice da descrição ativa
 
   const values = [
@@ -18,15 +17,18 @@ const Values = () => {
   };
 
   return (
-    <div className='values-background'>
+    <div className={styles.container} id="about" ref={ref}>
       <h1>A Essência</h1>
-      <div className='values-list'>
+      <div className={styles.valuesList}>
         {values.map((value, index) => (
           <React.Fragment key={index}>
-            <div className={`value${activeIndex === index ? '-active' : ''}`} onClick={() => toggleDescription(index)}>
+            <div
+              className={`${styles.value} ${activeIndex === index ? styles.valueActive : ''}`}
+              onClick={() => toggleDescription(index)}
+            >
               <span>{value.title}</span>
             </div>
-            <div className={`description ${activeIndex === index ? 'description-visible' : ''}`}>
+            <div className={`${styles.description} ${activeIndex === index ? styles.descriptionVisible : ''}`}>
               <p>{value.description}</p>
             </div>
           </React.Fragment>
@@ -34,6 +36,6 @@ const Values = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Values;

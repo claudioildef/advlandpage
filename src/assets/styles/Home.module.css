@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.formContato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.input {
+    width: 90%;
+    font-size: 20px;
+}
+
+
+.formContato input {
+    width: 90%;
+    padding: 12px;
+    background-color: white;
+    /* Fundo dos inputs */
+    border: none;
+    border-radius: 5px;
+    color: #000000;
+    /* Cor do texto */
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.formContato input::placeholder {
+    color: #00000079;
+    /* Cor dos placeholders */
+}
+
+.formContato input:focus {
+    outline: none;
+    background-color: #cbe5ff;
+    /* Cor ao focar no input */
+}
+
+.formContato input:hover {
+    background-color: #cbe5ff;
+    /* Cor ao passar o mouse */
+}
+
+.btnContato {
+    padding: 12px 25px;
+    background-color: #ffffff;
+    /* Fundo do botão */
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    width: 80%;
+    border: 1px solid white;
+}
+
+.btnContato:hover {
+    background-color: #2b2b2b;
+    color: rgb(255, 255, 255);
+    /* Cor ao passar o mouse */
+    transform: translateY(-3px);
+    /* Elevação ao passar o mouse */
+}
+
+.btnContato:active {
+    background-color: #1a2238;
+    /* Cor ao clicar */
+    transform: translateY(1px);
+    /* Reduz a elevação ao clicar */
+}
+
+.hero {
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/fundo.jpeg');
+    /* Caminho para a imagem de fundo */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.heroTitler {
+    padding-top: 5vh;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero h1 {
+    font-family: 'Sans-serif';
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.heroContainer {
+    display: flex;
+    height: 70%;
+    width: 90%;
+    gap: 2vw;
+}
+
+
+
+.heroContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    flex-direction: column;
+    /* Fundo preto semi-transparente */
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    /* Tornando responsivo para telas menores */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.heroContent p {
+    font-size: 25px;
+    /* Tamanho de fonte responsivo */
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-top: 0;
+}
+
+@media (max-width: 500px) {
+    .heroContent p {
+        font-size: 20px;
+
+    }
+}
+
+.heroContent h2 {
+    font-size: 40px;
+    /* Tamanho de fonte responsivo */
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-top: 0;
+}
+
+.heroDesc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    gap: 10px
+}
+
+@media (max-width: 768px) {
+
+    .heroContent {
+        max-width: 80%;
+        padding: 30px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .heroContainer {
+        flex-direction: column;
+    }
+
+    .heroContent h2 {
+        font-size: 30px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .heroContent {
+        max-width: 40vw;
+    }
+
+    .heroContent h2 {
+        font-size: 40px;
+    }
+
+}
+
+@media screen and (max-width: 890px) {
+
+    .heroDesc p {
+        font-size: 20px;
+    }
+
+}

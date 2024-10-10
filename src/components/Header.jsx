@@ -1,14 +1,22 @@
-import React, { useEffect, useState } from 'react'
-import Navbar from './Navbar';
-import logo from '../assets/img/logoclean.png'
-import '../assets/styles/Header.css'
+import React, { useEffect, useRef, useState } from 'react';
+import logo from '../assets/img/logoclean.png';
+import styles from '../assets/styles/Header.module.css';
 
-const Header = () => {
+const Header = ({ valuesRef, servicesRef, contactRef }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+
+
+
+  const goTo = (ref) => {
+    console.log(ref)
+    ref.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
+
       if (scrollPosition > 0) {
         setIsScrolled(true);
       } else {
@@ -22,19 +30,19 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-    return (
-      <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
-          <img className="logo" src={logo} alt="Monteiro Castilho" width={120}></img>
-          <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">Sobre</a></li>
-              <li><a href="#services">Serviços</a></li>
-              <li><a href="#contact">Contato</a></li>
-            </ul>
-          </nav>
-        </header>
-      );
+
+  return (
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+      <img className={styles.logo} src={logo} alt="Monteiro Castilho" width={120} />
+      <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
+        <ul>
+          <li><a name="values" onClick={() => goTo(valuesRef)}>Valores</a></li>
+          <li><a name="services" onClick={() => goTo(servicesRef)}>Serviços</a></li>
+          <li><a onClick={() => goTo(contactRef)}>Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+  );
 }
 
-export default Header
+export default Header;

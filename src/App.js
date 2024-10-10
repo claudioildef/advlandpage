@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Routes from './routes';
 import Header from './components/Header';
@@ -8,18 +8,22 @@ import Home from './pages/Home';
 import Founder from './pages/Founder';
 import Values from './pages/Values';
 import Services from './pages/Services';
-import Contact from './pages/Contact';
+
 
 
 function App() {
+
+  const valuesRef = useRef(null);
+  const servicesRef = useRef(null);
+  const contactRef = useRef(null);
+
   return (
     <>
-      <Header />
-      <Home />
+      <Header valuesRef={valuesRef} servicesRef={servicesRef} contactRef={contactRef} />
+      <Home ref={contactRef} />
       <Founder />
-      <Values />
-      <Services />
-      <Contact />
+      <Services ref={servicesRef} />
+      <Values ref={valuesRef} />
       <Footer className='footer' />
     </>
   );

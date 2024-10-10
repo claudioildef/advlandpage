@@ -17,7 +17,7 @@ export const services = [
     {
         title: "Previdenciário",
         imgPath: "previdencia.jpg",
-        desc: "Oferecemos consultoria especializada em Direito Previdenciário para segurados do INSS e servidores públicos, orientando sobre direitos e benefícios previdenciários. Nosso objetivo é garantir que nossos clientes recebam os benefícios previdenciários a que têm direito de forma rápida e eficiente. Atuamos com aposentadoria, pensão por morte, benefícios por incapacidade, revisão de benefícios, planejamento previdenciário, advocacia judicial e administrativa."
+        desc: "Oferecemos consultoria especializada em Direito Ambiental, ajudando empresas, organizações e indivíduos a interpretar e aplicar as normas ambientais. Nosso foco é garantir o cumprimento das leis e promover práticas sustentáveis. Atuamos em questões de licenciamento ambiental, regularização fundiária, contencioso, compliance e direito penal ambiental."
     },
     {
         title: "Penal",

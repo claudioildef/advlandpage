@@ -1,5 +1,4 @@
-/* Importando a fonte */
-@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 .container {
     height: auto;
@@ -12,8 +11,9 @@
 }
 
 .container h1 {
-    font-family: 'Sans-serif'; 
-    font-size: 50px; /* Tamanho da fonte menor em telas grandes */
+    font-family: 'Sans-serif';
+    font-size: 40px;
+    /* Tamanho da fonte menor em telas grandes */
     margin-bottom: 20px;
 }
 
@@ -36,7 +36,8 @@
 
 /* Imagem do Founder */
 .founder img {
-    border-radius: 50%; /* Deixa a imagem circular */
+    border-radius: 50%;
+    /* Deixa a imagem circular */
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -53,28 +54,32 @@
 
 /* Título e descrição do Founder */
 .founder h3 {
-    font-family: 'Sans-serif'; 
-    font-size: 4vw; /* Menor em telas grandes */
+    font-family: 'Sans-serif';
+    font-size: 4vw;
+    /* Menor em telas grandes */
     margin: 10px 0;
     text-align: center;
 }
 
 @media (min-width: 1200px) {
     .founder h3 {
-        font-size: 3vw; /* Ainda menor para telas muito grandes */
+        font-size: 3vw;
+        /* Ainda menor para telas muito grandes */
     }
 }
 
 .founder p {
-    font-size: 2.5vw; /* Tamanho menor para telas maiores */
-    font-family: "Arvo", serif;
+    font-size: 3vw;
+    /* Tamanho menor para telas maiores */
+    font-family: "Playfair Display", serif;
     font-weight: 500;
     line-height: 1.4;
 }
 
 @media (min-width: 1200px) {
     .founder p {
-        font-size: 2vw; /* Ajuste menor em telas maiores */
+        font-size: 2vw;
+        /* Ajuste menor em telas maiores */
     }
 }
 
@@ -83,14 +88,14 @@
     .founder h3 {
         font-size: 5vw;
     }
-    
+
     .founder p {
         font-size: 4vw;
     }
 }
 
 .graduation {
-    width: 100%; 
+    width: 100%;
     text-align: center;
     padding: 0 10px;
 }
