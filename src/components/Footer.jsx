@@ -7,11 +7,13 @@ const Footer = () => {
         <footer className={styles.footer}>
             <div className={styles.footerContainer}>
                 <div className={styles.footerSection}>
-                    <h4>Siga-nos</h4>
+                    <h4>Contato</h4>
                     <p>juridico@monteirocastilhoadv.com</p>
                     <p>Telefone (11) 9 4708-7825</p>
+                    <p>(11) 5225-8212</p>
                 </div>
                 <div className={styles.footerSection}>
+                    <h4>Siga-nos</h4>
                     <div className={styles.socialIcons}>
 
                         <a href="https://www.instagram.com/monteiro_castilho_advogados/" target="_blank" rel="noopener noreferrer">
@@ -23,7 +25,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <p className={styles.footerRights}>&copy; 2024 Thiago Monteiro Castilho. Todos os direitos reservados.</p>
+            <p className={styles.footerRights}>&copy; 2024 Thiago Monteiro Castilho 57.739.687/0001-07. Todos os direitos reservados.</p>
         </footer>
     );
 }

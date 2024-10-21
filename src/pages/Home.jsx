@@ -7,6 +7,7 @@ const Home = forwardRef((props, ref) => {
   const [email, setEmail] = useState('');
   const [info, setInfo] = useState('');
   const [telefone, setTelefone] = useState('');
+  const [servico, setServico] = useState('');
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -15,6 +16,7 @@ const Home = forwardRef((props, ref) => {
       name: nome,
       email: email,
       telefone: telefone,
+      servico: servico,
       message: info,
     };
 
@@ -36,16 +38,14 @@ const Home = forwardRef((props, ref) => {
           <div className={styles.heroDesc}>
             <h2>Quem somos</h2>
             <p>
-              Somos um escritório de advocacia comprometido em fornecer soluções
-              jurídicas eficientes e personalizadas para nossos clientes. Com anos de
-              experiência e uma equipe altamente qualificada, estamos prontos para
-              ajudá-lo em todas as suas questões legais.
+              Somos comprometidos em fornecer soluções eficientes e personalizadas.
+              Com anos de experiência e uma equipe altamente qualificada, entregamos com excelência nossos serviços jurídicos.
             </p>
           </div>
         </div>
         <div className={styles.heroContent}>
-          <h2>Entre em contato</h2>
-          <p> E faça parte dessa estrutura</p>
+          <h2>Agendamento de Consultas</h2>
+          <p> Faça parte dessa estrutura</p>
           <form className={styles.formContato} onSubmit={sendEmail} >
             <div className={styles.input}>
               <label htmlFor="nome">Nome</label>
@@ -65,14 +65,34 @@ const Home = forwardRef((props, ref) => {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
-            <div className={styles.input}>
-              <label htmlFor="telefone">Telefone</label>
-              <input
-                placeholder='19 99999-9999'
-                id="telefone"
-                value={telefone}
-                onChange={(e) => setTelefone(e.target.value)}
-              />
+            <div className={styles.inlineInputs}>
+              <div className={styles.input}>
+                <label htmlFor="telefone">Telefone</label>
+                <input
+                  placeholder='19 99999-9999'
+                  id="telefone"
+                  value={telefone}
+                  onChange={(e) => setTelefone(e.target.value)}
+                />
+              </div>
+
+              <div className={styles.input}>
+                <label htmlFor="servicos">Selecione um Serviço</label>
+                <select
+                  id="servicos"
+                  value={servico}
+                  onChange={(e) => setServico(e.target.value)}
+                >
+                  <option value="">Selecione um serviço</option>
+                  <option value="Civil">Civil</option>
+                  <option value="Trabalhista">Trabalhista</option>
+                  <option value="Familia e Sucessoes">Família e Sucessões</option>
+                  <option value="Previdenciario">Previdenciário</option>
+                  <option value="Penal">Penal</option>
+                  <option value="Empresarial">Empresarial</option>
+                  <option value="Ambiental">Ambiental</option>
+                </select>
+              </div>
             </div>
             <div className={styles.input}>
               <label htmlFor="info">Informações Adicionais</label>

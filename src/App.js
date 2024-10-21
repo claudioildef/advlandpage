@@ -21,9 +21,8 @@ function App() {
     <>
       <Header valuesRef={valuesRef} servicesRef={servicesRef} contactRef={contactRef} />
       <Home ref={contactRef} />
-      <Founder />
+      <Founder ref={valuesRef} />
       <Services ref={servicesRef} />
-      <Values ref={valuesRef} />
       <Footer className='footer' />
     </>
   );

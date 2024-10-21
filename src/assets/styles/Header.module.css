@@ -32,18 +32,22 @@
     font-family: 'Sans-serif', Arial, sans-serif;
 }
 
+
 .navbar ul {
+    cursor: pointer;
     list-style: none;
     display: flex;
     gap: 40px;
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 
 .navbar li {
     font-family: 'Serif', Times, serif;
     text-decoration: none;
     font-size: 20px;
+    user-select: none;
 }
 
 @media (max-width: 500px) {
@@ -63,6 +67,7 @@
     font-family: "Arvo", serif;
     font-weight: 500;
     font-style: normal;
+    user-select: none;
 }
 
 .navbar.scrolled li a {
